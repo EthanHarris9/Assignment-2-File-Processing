@@ -59,6 +59,6 @@ function calculateAverage(numbers) {
 
 console.log("Testing number processor functions in sample-numbers.txt:");
 
-console.log("Sum =", sumArr(fileContent))
-console.log("Highest and Lowest =", findHighAndLow(fileContent))
+console.log("Sum =", sumArr(numbers))
+console.log("Highest and Lowest =", findHighAndLow(numbers))
 console.log("Average =", calculateAverage(numbers));
