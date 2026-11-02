@@ -53,3 +53,5 @@ console.log("Testing text analyzer functions in sample-text.txt:");
 console.log("Word Count =", wordCount(fileContent2))
 console.log("Longest Word =", longestWord(fileContent2))
 console.log("Line Count =", lineCount(fileContent2))
+
+module.exports = { wordCount, longestWord, lineCount };
