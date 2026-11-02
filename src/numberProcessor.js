@@ -12,3 +12,18 @@ for (let i = 0; i < lines.length; i++) {
       numbers.push(parseFloat(line)); // Convert to numbers
     }
 }
+
+// Function to compute the sum of all numbers in the file
+function sumArr(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i]
+    }
+    return sum;
+}
+
+
+// Testing the functions
+
+console.log("Testing number processor functions in sample-numbers.txt:");
+console.log("Sum =", sumArr(fileContent))
