@@ -62,3 +62,5 @@ console.log("Testing number processor functions in sample-numbers.txt:");
 console.log("Sum =", sumArr(numbers))
 console.log("Highest and Lowest =", findHighAndLow(numbers))
 console.log("Average =", calculateAverage(numbers));
+
+module.exports = { sumArr, findHighAndLow, calculateAverage };
