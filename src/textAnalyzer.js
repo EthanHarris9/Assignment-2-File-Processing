@@ -34,11 +34,22 @@ function longestWord(content) {
     return longestWord;
 }
 
+// Function to find the line count in a file
+function lineCount(content) {
+
+    // Count the total number of lines from the file
+    const lines = content.split(/\r?\n/);
+    return lines.length;
+}
+
+// testing the functions
 
 console.log("Testing text analyzer functions in quotes.txt:");
 console.log("Word Count =", wordCount(fileContent))
 console.log("Longest Word =", longestWord(fileContent))
+console.log("Line Count =", lineCount(fileContent))
 
 console.log("Testing text analyzer functions in sample-text.txt:");
 console.log("Word Count =", wordCount(fileContent2))
 console.log("Longest Word =", longestWord(fileContent2))
+console.log("Line Count =", lineCount(fileContent2))
