@@ -14,5 +14,31 @@ function wordCount(content) {
     return words.length;
 }
 
+// Function to find the longets word from the file
+function longestWord(content) {
+    if (content.trim() === "") {
+        return 0;
+    }
+
+    const words = content.trim().split(/\s+/);
+    let longestWord = "";
+
+    for (let i = 0; i < words.length; i++) {
+        const currentWord = words[i].trim();
+
+        // Checking whether the current word is longer than the longest word currently found
+        if (currentWord.length > longestWord.length) {
+            longestWord = currentWord;
+        }
+    }
+    return longestWord;
+}
+
+
 console.log("Testing text analyzer functions in quotes.txt:");
 console.log("Word Count =", wordCount(fileContent))
+console.log("Longest Word =", longestWord(fileContent))
+
+console.log("Testing text analyzer functions in sample-text.txt:");
+console.log("Word Count =", wordCount(fileContent2))
+console.log("Longest Word =", longestWord(fileContent2))
