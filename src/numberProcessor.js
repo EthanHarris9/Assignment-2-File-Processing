@@ -3,7 +3,7 @@ const fs = require('fs');
 const fileContent = fs.readFileSync('./data/sample-numbers.txt', 'utf8');
 
 // Converting the text into numbers
-const lines = scoresText.split('\n');
+const lines = fileContent.split('\n');
 const numbers = [];
 
 for (let i = 0; i < lines.length; i++) {
@@ -58,5 +58,7 @@ function calculateAverage(numbers) {
 // Testing the functions
 
 console.log("Testing number processor functions in sample-numbers.txt:");
+
 console.log("Sum =", sumArr(fileContent))
 console.log("Highest and Lowest =", findHighAndLow(fileContent))
+console.log("Average =", calculateAverage(numbers));
