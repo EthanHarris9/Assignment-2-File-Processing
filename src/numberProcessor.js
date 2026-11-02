@@ -22,7 +22,12 @@ function sumArr(arr) {
     return sum;
 }
 
+// Function to find the highets and lowest number
 function findHighAndLow(arr) {
+     if (arr.length === 0) {
+        return {highest: null, lowest: null};
+    }
+
     let highest = arr[0];
     let lowest = arr[0];
 
@@ -39,6 +44,7 @@ function findHighAndLow(arr) {
     return {highest, lowest};
 }
 
+// Function to compute the average
 function calculateAverage(numbers) {
     if (numbers.length === 0) {
         return 0;
