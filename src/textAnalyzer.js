@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const fileContent = fs.readFileSync('quotes.txt', 'utf8');
-const fileContent2 = fs.readFileSync('sample-text.txt', 'utf8');
+const fileContent = fs.readFileSync('./data/quotes.txt', 'utf8');
+const fileContent2 = fs.readFileSync('./data/sample-text.txt', 'utf8');
 
 // Function to compute the word count of a file
 function wordCount(content) {
