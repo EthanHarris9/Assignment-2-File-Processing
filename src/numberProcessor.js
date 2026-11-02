@@ -39,6 +39,14 @@ function findHighAndLow(arr) {
     return {highest, lowest};
 }
 
+function calculateAverage(numbers) {
+    if (numbers.length === 0) {
+        return 0;
+    }
+
+    const sum = sumArr(numbers)
+    return sum / numbers.length;
+}
 
 
 // Testing the functions
