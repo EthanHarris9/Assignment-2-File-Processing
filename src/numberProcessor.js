@@ -56,6 +56,7 @@ function calculateAverage(numbers) {
 
 
 // Testing the functions
+if (require.main === module) {
 
 console.log("Testing number processor functions in sample-numbers.txt:");
 
@@ -63,4 +64,7 @@ console.log("Sum =", sumArr(numbers))
 console.log("Highest and Lowest =", findHighAndLow(numbers))
 console.log("Average =", calculateAverage(numbers));
 
+}
+
+// Export functions for testing with Jest
 module.exports = { sumArr, findHighAndLow, calculateAverage };
