@@ -36,4 +36,9 @@ describe('Text Analyzer Tests for longestWord Function', () => {
         const result = longestWord('JavaScript');
         expect(result).toBe('JavaScript');
     });
+    test('should return the first word encountered if a tie occurs', () => {
+        const result = longestWord('Big dog and cat');
+        expect(result).toBe('Big');
+    });
+
 });
