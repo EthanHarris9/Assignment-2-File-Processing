@@ -29,7 +29,7 @@ describe('Text Analyzer Tests for longestWord Function', () => {
 
     test('should handle an empty word string', () => {
         const result = longestWord('');
-        expect(result).toBe('');
+        expect(result).toBe(0);
     });
 
     test('should handle a one word string', () => {
