@@ -19,3 +19,21 @@ describe('Text Analyzer Tests for wordCount Function', () => {
         expect(result).toBe(4);
     });
 });
+
+// Testing multiple input types for the text analyzer longestWord function
+describe('Text Analyzer Tests for longestWord Function', () => {
+    test('should return the longest word in a simple string', () => {
+        const result = longestWord('Looking for a long word');
+        expect(result).toBe('Looking');
+    });
+
+    test('should handle an empty word string', () => {
+        const result = longestWord('');
+        expect(result).toBe('');
+    });
+
+    test('should handle a one word string', () => {
+        const result = longestWord('JavaScript');
+        expect(result).toBe('JavaScript');
+    });
+});
