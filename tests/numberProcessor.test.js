@@ -23,3 +23,28 @@ describe('Number Processor Tests for sumArr Function', () => {
         expect(result).toBe(7);
     });
 });
+
+// Testing multiple input types for the number processor findHighAndLow function
+describe('Number Processor Tests for findHighAndLow Function', () => {
+    test('should find the highest and lowest numbers', () => {
+        const result = findHighAndLow([5, 10, 3, 8]);
+        expect(result).toEqual({highest: 10, lowest: 3});
+    });
+
+    test('should handle an array with one number', () => {
+        const result = findHighAndLow([6]);
+        expect(result).toEqual({highest: 6, lowest: 6});
+    });
+
+    test('should handle negative numbers', () => {
+        const result = findHighAndLow([-5, -10, -15]);
+        expect(result).toEqual({highest: -5, lowest: -15});
+    });
+
+    test('should handle an array with the same numbers', () => {
+        const result = findHighAndLow([3, 3, 3]);
+        expect(result).toEqual({highest: 3, lowest: 3});
+    });
+});
+
+
