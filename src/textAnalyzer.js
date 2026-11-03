@@ -43,6 +43,7 @@ function lineCount(content) {
 }
 
 // testing the functions
+if (require.main === module) {
 
 console.log("Testing text analyzer functions in quotes.txt:");
 console.log("Word Count =", wordCount(fileContent))
@@ -54,4 +55,7 @@ console.log("Word Count =", wordCount(fileContent2))
 console.log("Longest Word =", longestWord(fileContent2))
 console.log("Line Count =", lineCount(fileContent2))
 
+}
+
+// Export functions for testing with Jest
 module.exports = { wordCount, longestWord, lineCount };
