@@ -47,4 +47,25 @@ describe('Number Processor Tests for findHighAndLow Function', () => {
     });
 });
 
+// Testing multiple input types for the number processor calculateAverage function
+describe('Number Processor Tests for calculateAverage Function', () => {
+    test('should calculate the average of all numbers', () => {
+        const result = calculateAverage([10, 20, 30, 40]);
+        expect(result).toBe(25);
+    });
 
+    test('should handle decimal averages', () => {
+        const result = calculateAverage([2, 3, 4]);
+        expect(result).toBe(3);
+    });
+
+    test('should handle negative numbers', () => {
+        const result = calculateAverage([-5, -10, -15]);
+        expect(result).toBe(-10);
+    });
+
+    test('should return 0 for an empty array', () => {
+        const result = calculateAverage([]);
+        expect(result).toBe(0);
+    });
+});
