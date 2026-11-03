@@ -40,5 +40,23 @@ describe('Text Analyzer Tests for longestWord Function', () => {
         const result = longestWord('Big dog and cat');
         expect(result).toBe('Big');
     });
-
 });
+
+// Testing multiple input types for the text analyzer lineCount function
+describe('Text Analyzer Tests for lineCount Function', () => {
+    test('should return the number of lines in a simple string', () => {
+        const result = lineCount('this is the first line\nsecond line\nthird line');
+        expect(result).toBe(3);
+    });
+
+    test('should handle zero lines', () => {
+        const result = lineCount('');
+        expect(result).toBe(0);
+    });
+
+    test('should handle one line that is empty', () => {
+        const result = lineCount('\n');
+        expect(result).toBe(1);
+    });
+});
+
