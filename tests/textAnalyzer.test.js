@@ -1,6 +1,5 @@
 // Importing the functions from the textAnalyzer file
-const { wordCount, longestWord, lineCount } =
-require('./src/textAnalyzer.js');
+const { wordCount, longestWord, lineCount } = require('../src/textAnalyzer.js');
 
 
 // Testing multiple input types for the text analyzer wordCount function
