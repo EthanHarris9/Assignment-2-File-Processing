@@ -45,6 +45,11 @@ describe('Number Processor Tests for findHighAndLow Function', () => {
         const result = findHighAndLow([3, 3, 3]);
         expect(result).toEqual({highest: 3, lowest: 3});
     });
+
+    test('should handle an empty array', () => {
+        const result = findHighAndLow([]);
+        expect(result).toEqual({highest: null, lowest: null});
+    });
 });
 
 // Testing multiple input types for the number processor calculateAverage function
