@@ -58,5 +58,11 @@ describe('Text Analyzer Tests for lineCount Function', () => {
         const result = lineCount('\n');
         expect(result).toBe(1);
     });
+
+    test('should count blank lines between text', () => {
+        const result = lineCount('first line\n\nsecond line');
+        expect(result).toBe(3);
+    });
+
 });
 
