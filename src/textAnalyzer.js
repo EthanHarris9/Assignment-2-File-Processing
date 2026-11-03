@@ -36,9 +36,18 @@ function longestWord(content) {
 
 // Function to find the line count in a file
 function lineCount(content) {
+    if (content === "") {
+        return 0;
+    }
 
     // Count the total number of lines from the file
     const lines = content.split(/\r?\n/);
+
+    // Remove extra empty line element at the end for when there is a blank line
+    if (lines[lines.length - 1] === "") {
+        lines.pop()
+    }
+
     return lines.length;
 }
 
